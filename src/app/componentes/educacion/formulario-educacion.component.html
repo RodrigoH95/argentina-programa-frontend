@@ -1,0 +1,28 @@
+<section class="container-fluid container-form">
+    <h1>{{title}} educación:</h1>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="nombreEdu">Titulo:</label><br>
+                <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
+            </div>
+            <div class="formGroup">
+                <label for="descEdu">Institución:</label><br>
+                <input type="text" class="form-control" id="descEdu" name="descEdu" [(ngModel)]="descEdu" required>
+            </div>
+            <div class="formGroup">
+                <label for="inicioEdu">Inicio:</label><br>
+                <input type="text" class="form-control" id="inicioEdu" name="inicioEdu" [(ngModel)]="inicioEdu" required>
+            </div>
+            <div class="formGroup">
+                <label for="finEdu">Fin:</label><br>
+                <input type="text" class="form-control" id="finEdu" name="finEdu" [(ngModel)]="finEdu" required>
+            </div>
+            <div class="formGroup">
+                <label for="imagenEdu">URL imagen:</label><br>
+                <input type="text" class="form-control" id="imagenEdu" name="imagenEdu" [(ngModel)]="imagenEdu" required>
+            </div>
+            <button class="btn btn-primary">
+                Confirmar
+            </button>
+        </form>
+    </section>

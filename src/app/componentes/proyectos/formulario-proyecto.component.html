@@ -1,0 +1,24 @@
+<section class="container-fluid container-form">
+    <h1>{{title}} proyecto:</h1>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="tituloProyecto">Titulo:</label><br>
+                <input type="text" class="form-control" id="tituloProyecto" name="tituloProyecto" [(ngModel)]="tituloProyecto" required>
+            </div>
+            <div class="formGroup">
+                <label for="descProyecto">Descripción:</label><br>
+                <input type="text" class="form-control" id="descProyecto" name="descProyecto" [(ngModel)]="descProyecto" required>
+            </div>
+            <div class="formGroup">
+                <label for="urlProyecto">URL del proyecto:</label><br>
+                <input type="text" class="form-control" id="urlProyecto" name="urlProyecto" [(ngModel)]="urlProyecto" required>
+            </div>
+            <div class="formGroup">
+                <label for="imagenProyecto">URL imagen:</label><br>
+                <input type="text" class="form-control" id="imagenProyecto" name="imagenProyecto" [(ngModel)]="imgProyecto" required>
+            </div>
+            <button class="btn btn-primary">
+                Confirmar
+            </button>
+        </form>
+    </section>

@@ -1,0 +1,36 @@
+<section class="section-skills">
+    <h2>Hard skills & Soft Skills</h2>
+    <div class="section section-title"><h3>Habilidades blandas:</h3><a *ngIf="isAdmin" [routerLink]="['/formulario-habilidades']" [queryParams]="{cat: 'SOFT'}"><i class="fas fa-plus"></i></a></div>
+    <section class="container-habilidades">
+        <div *ngFor="let habilidad of softSkills" class="bar">
+            <div class="bar-content">
+                <div class="bar-img-container"><img [src]="habilidad.imagenHab" class="bar-img" alt=""></div>
+                <h4>{{ habilidad.nombreHab}}</h4>
+                <div class="bar-background">
+                    <div class="bar-progress" [ngStyle]="{'width': habilidad.porcentaje +'%'}"></div>
+                </div>
+            </div>
+            <div *ngIf="isAdmin" class="section-icons">
+                <a [routerLink]="['/formulario-habilidades']" [queryParams]="{idHab: habilidad.idHab}"><i class="far fa-edit"></i></a>
+                <button (click)="deleteHabilidad(habilidad.idHab)" class="btn-action danger"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section section-title"><h3>Habilidades duras:</h3><a *ngIf="isAdmin" [routerLink]="['/formulario-habilidades']" [queryParams]="{cat: 'HARD'}"><i class="fas fa-plus"></i></a></div>
+    <section class="container-habilidades">
+        <div *ngFor="let habilidad of hardSkills" class="bar">
+            <div class="bar-content">
+                <div class="bar-img-container"><img [src]="habilidad.imagenHab" class="bar-img" alt=""></div>
+                <h4>{{ habilidad.nombreHab }}</h4>
+                <div class="bar-background">
+                    <div class="bar-progress" [ngStyle]="{'width': habilidad.porcentaje +'%'}"></div>
+                </div>
+            </div>
+            <div *ngIf="isAdmin" class="section-icons">
+                <a [routerLink]="['/formulario-habilidades']" [queryParams]="{idHab: habilidad.idHab}"><i class="far fa-edit"></i></a>
+                <button (click)="deleteHabilidad(habilidad.idHab)" class="btn-action"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+    </section>
+</section>

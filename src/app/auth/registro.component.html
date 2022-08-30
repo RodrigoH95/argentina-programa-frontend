@@ -1,0 +1,45 @@
+<app-navegacion></app-navegacion>
+<div class="container-fluid center-text" *ngIf="isLogged; else loggedOut">
+    <h2>Ya iniciaste sesión</h2>
+</div>
+
+<ng-template #loggedOut>
+    <div class="login">
+        <div *ngIf="f.submitted && isRegistered">
+            Cuenta creada exitosamente
+        </div>
+        <div>
+            <button class="btn btn-primary mh-10 inactive" [routerLink]="['/login']">Iniciar sesión</button>
+            <button class="btn btn-primary mh-10" [routerLink]="['/registro']">Crear cuenta</button>
+        </div>
+        <div class="form-login">       
+            <form #f="ngForm" (ngSubmit)="onRegister()" no validate>
+                <div class="formGroup">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre" required>
+                </div>
+                <div class="formGroup">
+                    <label for="nombreUsuario">Nombre de usuario:</label><br>
+                    <input type="text" name="nombreUsuario" id="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="text" name="email" id="email" [(ngModel)]="email" required>
+                </div>
+                <div class="formGroup">
+                    <label for="password">Contraseña:</label><br>
+                    <input type="password" name="password" id="password" [(ngModel)]="password" required>
+                </div>
+                <div class="formGroup">
+                    <button class="btn btn-secondary" [disabled]="!f.valid">Confirmar</button>
+                </div>
+            </form>
+            <div *ngIf="f.submitted && isRegisterFail">
+                No se ha podido crear la cuenta.
+                {{ errorMessage}}
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+

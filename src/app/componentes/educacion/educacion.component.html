@@ -1,0 +1,15 @@
+    <div *ngIf="educacion" class="educacion">
+        <div class="section section-title"><h2>Educación</h2><a *ngIf="isAdmin" routerLink="formulario-educacion"><i class="fas fa-plus"></i></a></div>
+        <div *ngFor="let educacion of educacion" class="section section-content">
+            <img [src]="educacion.imagenEdu" alt="imagen">
+            <div class="section-info">
+                <h3 class="title">{{ educacion.nombreEdu}}</h3>
+                <p class="description">{{ educacion.descEdu }}</p>
+                <p class="period">{{ educacion.inicioEdu}} - {{ educacion.finEdu }}</p>
+            </div>
+            <div *ngIf="isAdmin" class="section-icons">
+                <a [routerLink]="['/formulario-educacion']" [queryParams]="{idEdu: educacion.idEdu}"><i class="far fa-edit"></i></a>
+                <button (click)="deleteEducacion(educacion.idEdu)" class="btn-action"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+    </div>

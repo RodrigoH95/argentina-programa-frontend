@@ -1,0 +1,13 @@
+<section class="proyectos">
+    <div class="section section-title"><h2>Proyectos</h2><a *ngIf="isAdmin" routerLink="formulario-proyectos"><i class="fas fa-plus"></i></a></div>
+    <div *ngFor="let proyecto of proyectos" class="section section-projects">
+        <div class="project-info">
+            <a [href]="proyecto.urlProyecto" target="_blank"><h3 class="project-title">{{ proyecto.tituloProyecto }}</h3></a>
+            <p>{{ proyecto.descProyecto }}</p>
+        </div>
+        <div *ngIf="isAdmin" class="section-icons">
+            <a [routerLink]="['/formulario-proyectos']" [queryParams]="{idProyecto: proyecto.idProyecto}"><i class="far fa-edit"></i></a>
+            <button (click)="deleteProyecto(proyecto.idProyecto)" class="btn-action"><i class="fas fa-trash"></i></button>
+        </div>
+    </div>
+</section>

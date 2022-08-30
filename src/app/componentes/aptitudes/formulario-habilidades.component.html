@@ -1,0 +1,20 @@
+<section class="container-fluid container-form">
+    <h1>{{title}} habilidad:</h1>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="nombreHab">Nombre de habilidad:</label><br>
+                <input type="text" class="form-control" id="nombreHab" name="nombreHab" [(ngModel)]="nombreHab" required>
+            </div>
+            <div class="formGroup">
+                <label for="porcentaje">Progreso:</label><br>
+                <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+            </div>
+            <div class="formGroup">
+                <label for="imagenHab">URL imagen:</label><br>
+                <input type="text" class="form-control" id="imagenHab" name="imagenHab" [(ngModel)]="imagenHab" required>
+            </div>
+            <button class="btn btn-primary">
+                Confirmar
+            </button>
+        </form>
+    </section>

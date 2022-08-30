@@ -1,0 +1,32 @@
+<section class="container-fluid container-form">
+    <h1>Editar mis datos:</h1>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+            </div>
+            <div class="formGroup">
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido" required>
+            </div>
+            <div class="formGroup">
+                <label for="titulo">Titulo:</label><br>
+                <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+            </div>
+            <div class="formGroup">
+                <label for="descripcion">Sobre mí:</label><br>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+            </div>
+            <div class="formGroup">
+                <label for="img">URL imagen:</label><br>
+                <input type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required>
+            </div>
+            <div class="formGroup">
+                <label for="imgBanner">URL imagen banner:</label><br>
+                <input type="text" class="form-control" id="imgBanner" name="imgBanner" [(ngModel)]="imgBanner" required>
+            </div>
+            <button class="btn btn-primary">
+                Confirmar
+            </button>
+        </form>
+    </section>

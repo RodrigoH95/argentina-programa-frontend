@@ -1,0 +1,28 @@
+<section class="container-fluid container-form">
+    <h1>{{title}} experiencia laboral:</h1>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="nombreExp">Cargo o puesto:</label><br>
+                <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreExp" required>
+            </div>
+            <div class="formGroup">
+                <label for="descExp">Descripción:</label><br>
+                <input type="text" class="form-control" id="descExp" name="descExp" [(ngModel)]="descExp" required>
+            </div>
+            <div class="formGroup">
+                <label for="inicioExp">Inicio:</label><br>
+                <input type="text" class="form-control" id="inicioExp" name="inicioExp" [(ngModel)]="inicioExp" required>
+            </div>
+            <div class="formGroup">
+                <label for="finExp">Fin:</label><br>
+                <input type="text" class="form-control" id="finExp" name="finExp" [(ngModel)]="finExp" required>
+            </div>
+            <div class="formGroup">
+                <label for="imagenExp">URL imagen:</label><br>
+                <input type="text" class="form-control" id="imagenExp" name="imagenExp" [(ngModel)]="imagenExp" required>
+            </div>
+            <button class="btn btn-primary">
+                Confirmar
+            </button>
+        </form>
+    </section>

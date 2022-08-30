@@ -1,0 +1,25 @@
+<div *ngIf="persona">
+    <div class="banner"><img [src]="persona.imgBanner" alt="Banner"></div>
+    <div class="grid-perfil">
+        <div class="bio">
+            <div class="profile-picture">
+                <img [src]="persona.img" alt="Imagen de perfil">
+            </div>
+            <h3 class="profile-name">{{ persona.nombre }} {{ persona.apellido }}</h3>
+            <p>{{ persona.titulo }}</p>
+            <!-- <div class="bio-buttons">
+                <button class="btn btn-primary">Tengo interés en</button>
+                <button class="btn btn-secondary">Añadir sección</button>
+                <button class="btn btn-secondary">Más</button>
+            </div> -->
+        </div>
+        <div class="logo">
+            <a *ngIf="isAdmin" [routerLink]="['/formulario-acercade']" [queryParams]="{id: persona.id}"><i class="far fa-edit"></i></a><br>
+            <img src="https://www.unicen.edu.ar/sites/default/files/imagenes/actualidad/2011-01/conicet_2.jpg" alt="Logo (conicet)">
+        </div>
+    </div>
+    <section class="acerca-de">
+        <div class="section section-title"><h2>Acerca de</h2></div>
+        <div class="section section-content"><p class="section-text">{{ persona.descripcion}}</p></div>
+    </section>
+</div>

@@ -1,0 +1,36 @@
+.login {
+    margin: 3rem auto;
+    max-width: 45%;
+    text-align: center;
+}
+
+.form-login {
+    margin: 0;
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-terciary);
+}
+
+.mh-10 {
+    margin: 0;
+}
+
+.inactive {
+    background-color: var(--color-terciary);
+    border-bottom: 2px solid var(--color-terciary);
+}
+
+.btn-primary {
+    border-radius: 0;
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .login {
+        margin: 1rem 0.2em;
+        max-width: 100%;
+    }
+
+    .nav-bar {
+        width: 50%;
+    }
+}

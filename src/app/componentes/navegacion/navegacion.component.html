@@ -1,0 +1,19 @@
+<header>
+    <div class="nav-logo">    
+        <img src="../../../assets/img/arg-programa.png">
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li><a class="nav-link" href="https://www.linkedin.com/in/rodrigo-heredia-9a1477203/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="nav-link" href="https://github.com/RodrigoH95" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a class="nav-link" href="mailto:RHeredia95@hotmail.com?subject=Portfolio Arg Programa" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            <li *ngIf="!isLogged"><button [routerLink]="['/login']" class="btn btn-primary">Ingresar</button></li>
+            <li *ngIf="isLogged"><button class="btn btn-primary" (click)="onLogout()">Cerrar Sesión</button></li>
+        </ul>
+        <div class="hamburger">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </div>
+    </nav>
+</header>
