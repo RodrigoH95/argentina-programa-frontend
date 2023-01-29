@@ -13,7 +13,7 @@
             <form #f="ngForm" (ngSubmit)="onLogin()" no validate>
                 <div class="formGroup">
                     <label for="nombreUsuario">Nombre de usuario:</label><br>
-                    <input type="text" name="nombreUsuario" id="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+                    <input type="text" name="nombreUsuario" id="nombreUsuario" [(ngModel)]="nombreUsuario" required autofocus>
                 </div>
                 <div class="formGroup">
                     <label for="password">Contraseña:</label><br>

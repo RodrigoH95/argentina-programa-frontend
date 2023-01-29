@@ -280,6 +280,14 @@ input {
     min-width: 50%;
 }
 
+textarea {
+    min-width: 50%;
+    resize: vertical;
+    overflow: auto;
+    white-space: pre-wrap;
+    min-height: 5rem;
+}
+
 @media screen and (max-width: 700px) {
     .container-fluid {
         margin: 0 0.2em;
